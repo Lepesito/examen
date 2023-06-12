@@ -1,0 +1,475 @@
+cesar@LAPTOP-TG0UJOTB MINGW64 ~ (main)
+$ cd C:
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c
+$ cd examen
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen
+$ echo "# examen" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Lepesito/examen.git
+git push -u origin main
+Initialized empty Git repository in C:/examen/.git/
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) ffaeb2d] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 223 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Lepesito/examen.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git branch produccion
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git branch ventas
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git branch recurso_humano
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ touch materia_prima.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ touch productofinal.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ git status
+On branch produccion
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        imagenproducto.png
+        materia_prima.txt
+        productofinal.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ git commit -m "Push para hacer la rama de produccion con sus respectivos archivos"
+[produccion 01586df] Push para hacer la rama de produccion con sus respectivos archivos
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 imagenproducto.png
+ create mode 100644 materia_prima.txt
+ create mode 100644 productofinal.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ git push origin produccion
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 25.30 KiB | 12.65 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/Lepesito/examen/pull/new/produccion
+remote:
+To https://github.com/Lepesito/examen.git
+ * [new branch]      produccion -> produccion
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (produccion)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ touch tiendas.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git status
+On branch ventas
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tiendas.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git commit -m "push para añadir la rama de ventas con su respectiva lista"
+[ventas e3532fa] push para añadir la rama de ventas con su respectiva lista
+ 1 file changed, 3 insertions(+)
+ create mode 100644 tiendas.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git push origin ventas
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ventas' on GitHub by visiting:
+remote:      https://github.com/Lepesito/examen/pull/new/ventas
+remote:
+To https://github.com/Lepesito/examen.git
+ * [new branch]      ventas -> ventas
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ touch empleados.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git status
+On branch recurso_humano
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        empleados.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git commit -m "push para crear la rama de recursos humanos y su lista de empelados"
+[recurso_humano 5ec8d89] push para crear la rama de recursos humanos y su lista de empelados
+ 1 file changed, 5 insertions(+)
+ create mode 100644 empleados.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git push origin recurso_humano
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'recurso_humano' on GitHub by visiting:
+remote:      https://github.com/Lepesito/examen/pull/new/recurso_humano
+remote:
+To https://github.com/Lepesito/examen.git
+ * [new branch]      recurso_humano -> recurso_humano
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git merge produccion
+Updating ffaeb2d..01586df
+Fast-forward
+ imagenproducto.png | Bin 0 -> 26456 bytes
+ materia_prima.txt  |   0
+ productofinal.txt  |   0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 imagenproducto.png
+ create mode 100644 materia_prima.txt
+ create mode 100644 productofinal.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git commit -m "Se unio produccion a la rama principal"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Lepesito/examen.git
+   ffaeb2d..01586df  main -> main
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git log
+commit 01586df77879016d8f6400be48093d9ee0b17bdf (HEAD -> main, origin/produccion, origin/main, produccion)
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:34:08 2023 -0700
+
+    Push para hacer la rama de produccion con sus respectivos archivos
+
+commit ffaeb2d6c0b71703316166bc4d89bee652c2ea35
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:29:49 2023 -0700
+
+    first commit
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git tag -a v1.0.0 -m "version 1.0.0 del examen" 01586df77879016d8f6400be48093d9ee0b17bdf
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git push origin --tags
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 172 bytes | 172.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Lepesito/examen.git
+ * [new tag]         v1.0.0 -> v1.0.0
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git diff
+diff --git a/empleados.txt b/empleados.txt
+index 2a522a2..1f6f14a 100644
+--- a/empleados.txt
++++ b/empleados.txt
+@@ -2,4 +2,10 @@
+ 2. Dios
+ 3. Jesucristo
+ 4. Mi mamá
+-5. Fulano
+\ No newline at end of file
++5. Fulano
++
++6. Espiritu santo
++7. Jesús
++8. Juan Pablo
++9. Franciso
++10.Paco
+\ No newline at end of file
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        empleados.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git commit -m "se agregaron 5 empleados mas"
+[recurso_humano d9ccf01] se agregaron 5 empleados mas
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git push origin recurso_humano
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 399 bytes | 399.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Lepesito/examen.git
+   5ec8d89..d9ccf01  recurso_humano -> recurso_humano
+g
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git merge recurso_humano
+Merge made by the 'ort' strategy.
+ empleados.txt | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 empleados.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git commit -m "se hizo merge con la rama de recurso_humano"
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git log
+commit 29c4b7beae3163bbb0e66ea026c258c19689d8a2 (HEAD -> main)
+Merge: 01586df d9ccf01
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:43:37 2023 -0700
+
+    Merge branch 'recurso_humano'
+
+commit d9ccf010b7d71ac0389a0ca06de591579d2ca594 (origin/recurso_humano, recurso_humano)
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:43:01 2023 -0700
+
+    se agregaron 5 empleados mas
+
+commit 5ec8d898e3ef7c9f465dd9e345eeb0c5e9167ef6
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:37:16 2023 -0700
+
+    push para crear la rama de recursos humanos y su lista de empelados
+
+commit 01586df77879016d8f6400be48093d9ee0b17bdf (tag: v1.0.0, origin/produccion, origin/main, produccion)
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:34:08 2023 -0700
+
+    Push para hacer la rama de produccion con sus respectivos archivos
+
+commit ffaeb2d6c0b71703316166bc4d89bee652c2ea35
+Author: Lepesito <tic-280021@utnay.edu.mx>
+Date:   Mon Jun 12 16:29:49 2023 -0700
+
+    first commit
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git tag -a v1.1.0 -m "Version 1.1.0 del examen" 29c4b7beae3163bbb0e66ea026c258c19689d8a2
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git push origin --tags
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 446 bytes | 446.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Lepesito/examen.git
+ * [new tag]         v1.1.0 -> v1.1.0
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (main)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git diff
+diff --git a/tiendas.txt b/tiendas.txt
+index b361df6..05ffff2 100644
+--- a/tiendas.txt
++++ b/tiendas.txt
+@@ -1,3 +1,5 @@
+ Ley
+ Bodega Aurrera
+-Walmart
+\ No newline at end of file
++Walmart
++Office
++Deposito de casa, osea el home deppot
+\ No newline at end of file
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git commit -m "se agregaron 2 tiendas"
+[ventas 15b81d3] se agregaron 2 tiendas
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git push origin ventas
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Lepesito/examen.git
+   e3532fa..15b81d3  ventas -> ventas
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (ventas)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ mkdir fotos_empleados
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git status
+On branch recurso_humano
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fotos_empleados/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git diff
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git commit -m "se añadieron 5 fotos de empleados"
+[recurso_humano bc28e3b] se añadieron 5 fotos de empleados
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fotos_empleados/empleado 1.jpg
+ create mode 100644 fotos_empleados/empleado 2.jpg
+ create mode 100644 fotos_empleados/empleado 3.jpg
+ create mode 100644 fotos_empleados/empleado 4.jpg
+ create mode 100644 fotos_empleados/empleado 5.jfif
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git push origin recurso_humano
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 24.02 MiB | 810.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Lepesito/examen.git
+   d9ccf01..bc28e3b  recurso_humano -> recurso_humano
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ touch sueldos.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git status
+On branch recurso_humano
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sueldos.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git add .
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git commit -m "Se añadieron los puestos y sueldos"
+[recurso_humano 07baa38] Se añadieron los puestos y sueldos
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sueldos.txt
+
+cesar@LAPTOP-TG0UJOTB MINGW64 /c/examen (recurso_humano)
+$ git push origin recurso_humano
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Lepesito/examen.git
+   bc28e3b..07baa38  recurso_humano -> recurso_humano

@@ -1,0 +1,4 @@
+jefe  10000
+RH    8000
+Vendedor 7000
+Conserje 6000
